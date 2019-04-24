@@ -25,11 +25,20 @@ function toL33t(text) {
 }
 
 function Output(props) {
+    // return (
+    //     <div>{
+    //         props.transform === "l33t" ? toL33t(props.text) : props.text.toUpperCase()
+    //     }</div>
+    // );
+
+    let displayText = props.text.toUpperCase();
+    if(props.transform === 'l33t') {
+        displayText = toL33t(props.text);
+    }
+
     return (
-        <div>{
-            props.transform === "l33t" ? toL33t(props.text) : props.text.toUpperCase()
-        }</div>
-    );
+        <div>{displayText}</div>
+    )
 }
 
 

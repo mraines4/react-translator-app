@@ -21,11 +21,11 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {/* <ul>
+          <ul>
             {
-              this.state.names.map(name => <li>{name}</li>)
+              this.state.names.map((name, i) => <li key={i}>{name}</li>)
             }
-          </ul> */}
+          </ul>
           <input 
             onChange={ this._updateInputText }
           />
