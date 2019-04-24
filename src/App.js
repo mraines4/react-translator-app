@@ -10,7 +10,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      inputText: ''
+      inputText: '',
+      names: ['matt', 'judah', 'chelsey']
+
     }
   }
 
@@ -19,11 +21,20 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          {/* <ul>
+            {
+              this.state.names.map(name => <li>{name}</li>)
+            }
+          </ul> */}
           <input 
             onChange={ this._updateInputText }
           />
           <Output 
             text={this.state.inputText}
+          />
+          <Output 
+            text={this.state.inputText}
+            transform="l33t"
           />
         </header>
       </div>
