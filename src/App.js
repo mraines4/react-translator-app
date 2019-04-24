@@ -20,11 +20,7 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <input 
-            onChange={ (e) => {
-              this.setState({
-                inputText: e.target.value
-              })
-            } }
+            onChange={ this._updateInputText }
           />
           <Output 
             text={this.state.inputText}
@@ -32,6 +28,12 @@ class App extends React.Component {
         </header>
       </div>
     );
+  }
+
+  _updateInputText = (e) => {
+    this.setState({
+      inputText: e.target.value
+    }, () => {console.log(`After setState, State is now ${this.state.inputText}`)})
   }
 }
 
